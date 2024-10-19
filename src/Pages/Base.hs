@@ -18,4 +18,19 @@ base h = do
     doctypehtml_ $ do
         html_ $ do
             body_ $ do
-                h
+                nav_ [] $ do
+                    h
+                    ul_ [] $ do
+                        li_ [] $ do
+                            a_ [href_ "/home"] "Home"
+                        li_ [] $ do
+                            a_ [href_ "/software"] "Software that I've built"
+                        li_ [] $ do
+                            a_ [href_ "/stories"] "Short Stories (mostly in Spanish)"
+                    footer
+  where
+    footer = do
+        hr_ []
+        p_ [] $ do
+            a_ [href_ "http://validator.w3.org/check/referer"] $ do
+                img_ [src_ "http://www.w3.org/Icons/valid-html401", alt_ "Valid HTML 4.01!", height_ "31", width_ "88"]
